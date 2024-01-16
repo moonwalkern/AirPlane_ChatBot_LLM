@@ -33,3 +33,4 @@ if __name__ == "__main__":
     # docs = db.similarity_search(query)    
 
     # print(docs[0].page_content)
+     
