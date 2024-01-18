@@ -12,6 +12,18 @@ So for that we will using two pdf books: <\br>
 
 ![Alt text](images/llm_design.drawio.png)
 
+login as root
+```
+conda create -n deeplearning101 python=3.10
+
+```
+
+activate deeplearning101 in root user
+
+```
+conda install pytorch torchvision torchaudio cudatoolkit -c pytorch
+```
+
 ### Download AirPlane Handbook from FAA Website
 ```
     mkdir -p docs

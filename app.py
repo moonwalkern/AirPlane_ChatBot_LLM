@@ -57,13 +57,15 @@ def process_answer(instruction, history):
     generated_text = qa(instruction)
     answer = generated_text['result']
     i = 1
-    for docs in generated_text['source_documents']:
-        page_content,metadata, type = docs
-        print(page_content[1])
-        print(metadata[1]['source'])
-        print(type)
-        page = page +  "\n"+  f"({i}) "+ page_content[1] + "\n" + metadata[1]['source'] + "\n"
-        i = i+1    
+    # print(generated_text)
+    if 'source_documents' in generated_text:
+        for docs in generated_text['source_documents']:
+            page_content,metadata, type = docs
+            print(page_content[1])
+            print(metadata[1]['source'])
+            print(type)
+            page = page +  "\n"+  f"({i}) "+ page_content[1] + "\n" + metadata[1]['source'] + "\n"
+            i = i+1    
 
     answer = answer + "\n\n" + page
     print(answer)
