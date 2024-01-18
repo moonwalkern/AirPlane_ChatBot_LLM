@@ -33,6 +33,13 @@ conda install pytorch torchvision torchaudio cudatoolkit -c pytorch
 
 ### Clone LaMini-T5-738M from HuggingFace
 
+Install git lfs before cloning, for ubuntu
+
 ```
+sudo apt-get install git-lfs
+```
+to clone large files use git-lfs
+```
+git-lfs install
 git clone https://huggingface.co/MBZUAI/LaMini-T5-738M
 ```
