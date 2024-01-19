@@ -89,7 +89,24 @@ def main():
     #     answer, metadata = process_answer(question)
     #     st.write(answer)
     #     st.write(metadata)
-    gr.ChatInterface(
+    # gr.ChatInterface(
+    #     process_answer,
+    #     chatbot=gr.Chatbot(height=500),
+    #     textbox=gr.Textbox(placeholder="Enter your question here",container=False, scale=7),
+    #     title="Search for FAA Questions",
+    #     theme="soft",
+    #     examples=[
+    #         "What is lift",
+    #         "What is drag",
+    #         "What is Private Pilot Written Test"
+    #     ],
+    #     cache_examples=False,
+    #     retry_btn=None,
+    #     undo_btn="Delete Previous",
+    #     clear_btn="Clear"
+    # ).launch(share=True)
+
+    chat = gr.ChatInterface(
         process_answer,
         chatbot=gr.Chatbot(height=500),
         textbox=gr.Textbox(placeholder="Enter your question here",container=False, scale=7),
@@ -104,7 +121,22 @@ def main():
         retry_btn=None,
         undo_btn="Delete Previous",
         clear_btn="Clear"
-    ).launch(share=True)
-    
+    )
+chat = gr.ChatInterface(
+        process_answer,
+        chatbot=gr.Chatbot(height=500),
+        textbox=gr.Textbox(placeholder="Enter your question here",container=False, scale=7),
+        title="Search for FAA Questions",
+        theme="soft",
+        examples=[
+            "What is lift",
+            "What is drag",
+            "What is Private Pilot Written Test"
+        ],
+        cache_examples=False,
+        retry_btn=None,
+        undo_btn="Delete Previous",
+        clear_btn="Clear"
+    )
 if __name__ == "__main__":
     main()

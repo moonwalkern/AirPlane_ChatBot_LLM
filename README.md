@@ -43,3 +43,10 @@ to clone large files use git-lfs
 git-lfs install
 git clone https://huggingface.co/MBZUAI/LaMini-T5-738M
 ```
+
+### Running Gradio on FastAPI using Gunicorn
+
+```
+gunicorn run:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:5000 --daemon
+```
+

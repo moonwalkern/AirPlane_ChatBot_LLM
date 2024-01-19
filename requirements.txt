@@ -12,3 +12,6 @@ torch
 langchain-community
 streamlit
 gradio
+fastapi
+uvicorn[standard]
+gunicorn
